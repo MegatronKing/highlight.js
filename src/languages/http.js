@@ -9,7 +9,7 @@ Website: https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
 export default function(hljs) {
   const regex = hljs.regex;
   const VERSION = 'HTTP/([32]|1\\.[01])';
-  const HEADER_NAME = /[A-Za-z][A-Za-z0-9-]*/;
+  const HEADER_NAME = /[A-Za-z][A-Za-z0-9-_]*/;
   const HEADER = {
     className: 'attribute',
     begin: regex.concat('^', HEADER_NAME, '(?=\\:\\s)'),
